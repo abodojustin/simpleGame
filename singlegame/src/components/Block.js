@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function Block() {
+export default function Block({entierObjet,tuileIsclicked=false}) {
     return (
-        <div className="block">
-
+        <div style={{backgroundColor:entierObjet.backgroundColor}} className={tuileIsclicked ? "block-active" : "block"}>
+                {entierObjet.title}
         </div>
     )
 }
